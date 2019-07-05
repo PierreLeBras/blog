@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+     
+      <h2>Post</h2>
+      <ul class="list-group">
+        <app-post *ngFor="let post of listPost"
+                       [postTitle]="post.title"
+                       [postContent]="post.content"
+                       [postcounter]="post.loveIts"
+                       [postDate]="post.created_at"
+                       >
+                         
+                         <button class="btn btn-success" 
+       (click)="onLove()">Love</button>
+   
+   <button class="btn btn-danger " 
+       (click)="onDontLove()">DontLove</button>
+                       </app-post>
+
+      </ul>
+      
+    </div>
+  </div>
+</div>
+
+
